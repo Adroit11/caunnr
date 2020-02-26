@@ -1,4 +1,4 @@
-name: Labeler
+name: Caunnr PR Label
 on: [pull_request]
 
 jobs:
