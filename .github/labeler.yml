@@ -1,0 +1,13 @@
+# Add 'repo' label to any root file changes
+controller:
+  - app/Http/Controllers/**/*.php
+
+view:
+  - resources/**/*
+
+route:
+  - routes/**/*
+asset:
+  - public/*
+core:
+  - config/*
