@@ -19,4 +19,4 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
       - name: PHP Insights Action
-        uses: stefanzweifel/laravel-phpinsights-action@v1.1.1
+        run: php artisan insights
