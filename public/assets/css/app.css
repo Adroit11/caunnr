@@ -1,0 +1,35 @@
+:root {
+    --mainWhite: #fbfbfb;
+    --mainAsh: #ededed;
+    --mainLiteAsh: #919aa3;
+    --mainDarkAsh: #6d7278;
+    --mainDark: #000000;
+    --mainYellow: #f8a519;
+    --mainOrange: #f74a1a;
+}
+@font-face {
+    font-family: Calibri;
+    src: url("/assets/fonts/CalibreLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Calibri;
+    font-weight: bold;
+    src: url("/assets/fonts/CalibreBold.otf") format("opentype");
+}
+
+body {
+    font-family: Calibri;
+}
+
+.logo {
+    width: 50px;
+}
+
+.header_icon {
+    width: 30px;
+}
+
+.bg-main-orange {
+    background-color: var(--mainOrange);
+}

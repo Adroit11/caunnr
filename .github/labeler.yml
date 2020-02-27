@@ -1,5 +1,6 @@
 # Add 'repo' label to any root file changes
 automerge:
+  title: "^FIX:.*"
   mergeable: true
 
 WIP:
