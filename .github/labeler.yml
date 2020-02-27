@@ -1,16 +1,7 @@
 # Add 'repo' label to any root file changes
 automerge:
-  - ./*
+  mergeable: true
 
-controller:
-  - app/Http/Controllers/**/*.php
-
-view:
-  - resources/**/*
-
-route:
-  - routes/**/*
-asset:
-  - public/*
-core:
-  - config/*
+WIP:
+  title: "^WIP:.*"
+  mergeable: false
