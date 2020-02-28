@@ -1,5 +1,5 @@
 name: Cauunr Integration
-on: [push, pull_request]
+on: [push]
 jobs:
   caunnr-tests:
     runs-on: ubuntu-latest
@@ -18,5 +18,3 @@ jobs:
           php artisan migrate
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
-      - name: PHP Insights Action
-        run: php artisan insights
