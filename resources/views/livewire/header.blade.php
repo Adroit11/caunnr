@@ -5,7 +5,9 @@
                 <div class="w-4/5 flex items-center">
                     <img src="{{asset('assets/icons/logo.svg')}}" alt="caunnr logo" class="logo">
                     <div class="ml-4 w-full">
-                        <input class="p-3 w-full border border-gray-300" type="text" placeholder="Search">
+                        <label>
+                            <input class="pl-10 p-3 w-full border border-gray-300" type="text" placeholder="Search">
+                        </label>
                     </div>
                     <div class="ml-4">
                         <select class="p-3 border border-gray-300 text-gray-500"><option>All</option></select>

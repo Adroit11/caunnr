@@ -33,3 +33,17 @@ body {
 .bg-main-orange {
     background-color: var(--mainOrange);
 }
+
+label {
+    position: relative;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url("/assets/icons/search.svg") center / contain no-repeat;
+}
