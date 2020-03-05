@@ -1,4 +1,4 @@
-<div class="font-sans bg-grey-lighter flex flex-col min-h-screen w-full">
+
     <div class="bg-white">
         <div class="container flex mx-auto px-12 py-6">
             <div class="flex items-center py-2 px-10 w-full">
@@ -32,4 +32,4 @@
             </div>
         </div>
     </div>
-</div>
+
