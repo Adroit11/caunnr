@@ -103,3 +103,26 @@ label:before {
 .circle-green {
     background-color: var(--mainGreen);
 }
+
+.model_img {
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+}
+
+.border-mainorange {
+    border-color: var(--mainOrange);
+}
+
+.model_btn {
+    max-width: 120px;
+    margin: 20px auto;
+}
+
+.shopnow {
+    width: 120px;
+    height: 50px;
+    margin: -20px 0 0 -5px;
+    background: #ffffff;
+    color: #000000;
+}

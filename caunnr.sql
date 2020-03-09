@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2020 at 04:23 PM
+-- Generation Time: Mar 09, 2020 at 04:57 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -58,6 +58,15 @@ CREATE TABLE `items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`id`, `name`, `description`, `notes`, `slug`, `color`, `image`, `price`, `discount`, `rating`, `model_id`, `created_at`, `updated_at`) VALUES
+(1, 'Samsung Galaxy S10', '32GB - 128GB', 'Lorem Ipsdjhljcszhhasd asjihgcsakjdhja jagzbcijasdhajdasn hjbscjk', 'samsung-s10', 'black', 'samsung-s10.png', '98000', 8.00, 5, 1, '2020-03-08 23:00:00', NULL),
+(2, 'iPhone X', '120 gig', 'lkjshl ushdfnkjasnas ijshdfjkhasdfnsa', 'iphonex', 'silver', 'iphonex.png', '220000', 3.00, 5, 2, '2020-03-08 23:00:00', NULL),
+(3, 'Mac Book Pro 13', '2018, 500gig, Touchbar, Silver', 'HNbmkdsmnds jsdmndsknkldss kasnsdklsd', 'mac-book-pro-13', 'silver', 'pro13.png', '460000', 11.00, 4, 3, '2020-03-08 23:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -227,7 +236,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `migrations`
