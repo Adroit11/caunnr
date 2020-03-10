@@ -27,7 +27,7 @@
             <div class="w-3/5">
                 <div class="w-full grid grid-cols-4">
                     @foreach($product->model as $model)
-                        @foreach($model->item as $item)
+                        @foreach($model->item->take(8) as $item)
                             @livewire('product-items', ['model' => $item])
                         @endforeach
                     @endforeach

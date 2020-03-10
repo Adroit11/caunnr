@@ -126,3 +126,11 @@ label:before {
     background: #ffffff;
     color: #000000;
 }
+
+.card-items {
+    height: 253px;
+}
+
+.card-item-img {
+    height: 115px;
+}
