@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Mar 09, 2020 at 04:57 PM
-=======
--- Generation Time: Mar 06, 2020 at 04:23 PM
->>>>>>> 639675a1b2671c4588802928a13385afdeb0d12b
+-- Generation Time: Mar 10, 2020 at 03:29 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -62,19 +58,28 @@ CREATE TABLE `items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-<<<<<<< HEAD
 --
 -- Dumping data for table `items`
 --
 
 INSERT INTO `items` (`id`, `name`, `description`, `notes`, `slug`, `color`, `image`, `price`, `discount`, `rating`, `model_id`, `created_at`, `updated_at`) VALUES
-(1, 'Samsung Galaxy S10', '32GB - 128GB', 'Lorem Ipsdjhljcszhhasd asjihgcsakjdhja jagzbcijasdhajdasn hjbscjk', 'samsung-s10', 'black', 'samsung-s10.png', '98000', 8.00, 5, 1, '2020-03-08 23:00:00', NULL),
-(2, 'iPhone X', '120 gig', 'lkjshl ushdfnkjasnas ijshdfjkhasdfnsa', 'iphonex', 'silver', 'iphonex.png', '220000', 3.00, 5, 2, '2020-03-08 23:00:00', NULL),
-(3, 'Mac Book Pro 13', '2018, 500gig, Touchbar, Silver', 'HNbmkdsmnds jsdmndsknkldss kasnsdklsd', 'mac-book-pro-13', 'silver', 'pro13.png', '460000', 11.00, 4, 3, '2020-03-08 23:00:00', NULL);
+(1, 'Samsung Galaxy S10', '32GB - 128GB', 'Lorem Ipsdjhljcszhhasd asjihgcsakjdhja jagzbcijasdhajdasn hjbscjk', 'samsung-s10', 'black', 'samsung-s10.jpg', '98000', 8.00, 5, 1, '2020-03-08 23:00:00', NULL),
+(2, 'iPhone X', '120 gig', 'lkjshl ushdfnkjasnas ijshdfjkhasdfnsa', 'iphonex', 'silver', 'phone-x.png', '220000', 3.00, 5, 2, '2020-03-08 23:00:00', NULL),
+(3, 'Mac Book Pro 13', '2018, 500gig, Touchbar, Silver', 'HNbmkdsmnds jsdmndsknkldss kasnsdklsd', 'mac-book-pro-13', 'silver', 'pro13.jpg', '460000', 11.00, 4, 3, '2020-03-08 23:00:00', NULL),
+(4, 'Galaxy Note 10+', 'Led View, Sensor Cover', 'Samsung Note 10 LED view cover', 'samsung-note10', 'Black', 'note10.jpg', '380000', 6.00, 5, 1, '2020-03-09 23:00:00', NULL),
+(5, 'Galaxy A20s', '6.5Inch (3GB, 64Gig ROM) Android 10', 'Samsung Galaxy A20s 6.5-Inch (3GB,32GB ROM) Android 9.0, (13MP+8MP+5MP)+ 8MP Dual SIM 4000mAh 4G LTE Smartphone - Black (BF19)', 'samsung-a20', 'silver', 'A20s.jpg', '61000', 2.70, 5, 1, '2020-03-09 23:00:00', NULL),
+(6, 'Gionee S8s', '5.86\' 32GB ROM, 3GB RAM, 13MP Camera', 'S8s Black - 5.86\' 32GB ROM, 3GB RAM, 13MP Camera, 4G LTE Smartphone With 15 Months Warranty', 'gionee-s8', 'Black', 'S8s.jpg', '39400', 3.90, 5, 4, '2020-03-09 23:00:00', NULL),
+(7, 'Galaxy A51', '(4GB,128GB ROM) Android10', 'Galaxy A51 6.5\'\' (4GB,128GB ROM) Android10.0, (48MP +12MP + 5MP + 5MP) + 32MP Dual SIM - Prism Crush Black', 'galaxy-a51', 'Gold', 'galaxya51.jpg', '123000', 11.97, 5, 1, '2020-03-09 23:00:00', NULL),
+(8, 'POP 3', '5.7\" FW+ Screen16GB ROM + 1GB RAM', 'POP 3 (BB2) 5.7\" FW+ Screen16GB ROM + 1GB RAM,Android 8.1 Oreo, 8MP + 5MP Camera, 3500mAh, Fingerprint -Sandstone Black', 'pop3', 'Black', 'technopop.jpg', '26900', 4.80, 5, 5, '2020-03-09 23:00:00', NULL),
+(9, 'Galaxy A30s', '6.4-Inch (4GB,64GB ROM) Android 9.0', 'Galaxy A30s 6.4-Inch (4GB,64GB ROM) Android 9.0, (25MP+8MP+5MP)+ 16MP Dual SIM 4000mAh 4G LTE - Prism Crush Black', 'galaxy-a30', 'Black', 'A30s.jpg', '103800', 9.43, 5, 1, '2020-03-09 23:00:00', NULL),
+(10, 'MacBook Air 13', 'Corei5 - 256GB - Gold', 'MacBook Air 13.3 - Corei5 - 256GB - Gold - New 2019 Model', 'macbook-air-13', 'Gold', 'macbookair.jpg', '489600', 0.89, 5, 6, '2020-03-09 23:00:00', NULL),
+(11, 'MacBook Pro 16 2019', 'CoreI7/512GB/16gb - Touch Bar', 'MacBook Pro 16inch  CoreI7/512GB/16gb - Touch Bar - New 2019', 'pro-16', 'Gold', 'macbook-pro-16.jpg', '793000', 6.70, 5, 3, '2020-03-09 23:00:00', NULL),
+(12, 'HP Notebook 15', 'Intel Core I3 (8GB RAM, 1TB HDD) 32GB', 'Notebook 15 Intel Core I3 (8GB RAM, 1TB HDD) 32GB Flash+Mouse+USB Light For Keyboard 15.6-Inch Windows 10 Black Colour', 'note-15', 'Black', 'note-15.jpg', '128000', 1.60, 5, 7, '2020-03-09 23:00:00', NULL),
+(13, 'HP 255 G6', 'Quad Core (4GB,500GB HDD) 32GB', '255 G6 AMD Quad Core (4GB,500GB HDD) 32GB Flash+Mouse+Fashion Watch Windows 10 Laptop + Free Bag + HP Mouse', 'hp-255', 'Black', 'hp-quadcore.jpg', '96000', 7.63, 5, 7, '2020-03-09 23:00:00', NULL),
+(14, 'ThinkPad X390', 'Intel Core I7-8665U 1.9Ghz 512GB SSD 16GB RAM', 'ThinkPad X390 Intel Core I7-8665U 1.9Ghz 512GB SSD 16GB RAM 13 Inch Touch Backlit Win 10 Pro', 'thinkpad', 'Black', 'lenovo-thinkpad.jpg', '521000', 11.78, 5, 8, '2020-03-09 23:00:00', NULL),
+(15, 'Lenovo Ideapad', 'Celeron 1TB HDD 4GB RAM', 'Ideapad Intel Celeron 1TB HDD 4GB RAM Windows 10 +USB LIGHT', 'ideapad', 'Black', 'ideapad.jpg', '91000', 7.10, 5, 8, '2020-03-09 23:00:00', NULL),
+(16, 'Yoga 310', 'Intel Pentium 11.6\" Touchscreen', 'Yoga 310 Intel Pentium 11.6\" Touchscreen , 4gb RAM, 32gb  EMMC Win 10+Mouse & Usb Led', 'yoga-310', 'Black', 'yoga.jpg', '95400', 9.50, 5, 8, '2020-03-09 23:00:00', NULL);
 
-=======
->>>>>>> 639675a1b2671c4588802928a13385afdeb0d12b
 -- --------------------------------------------------------
 
 --
@@ -124,7 +129,12 @@ CREATE TABLE `models` (
 INSERT INTO `models` (`id`, `name`, `tag_text`, `notes`, `slug`, `logo`, `product_id`, `created_at`, `updated_at`) VALUES
 (1, 'Samsung', 'Samsung mobile phones', NULL, 'samsung', 'phone-x.png', 1, '2020-03-05 23:00:00', NULL),
 (2, 'Apple', 'iPhones', NULL, 'iphone', 'phone-x.png', 1, '2020-03-05 23:00:00', NULL),
-(3, 'Mac Book Pro', 'Pro 2019 ', '16 inches Mac Book Pro2019', 'mac-book', 'laptop.png', 2, '2020-03-05 23:00:00', NULL);
+(3, 'Mac Book Pro', 'Pro 2019 ', '16 inches Mac Book Pro2019', 'mac-book', 'laptop.png', 2, '2020-03-05 23:00:00', NULL),
+(4, 'Gionee', 'Gionnee Smart Phones', 'asfdfsf fgfdgdg', 'gionee', 'gionee.png', 1, '2020-03-09 23:00:00', NULL),
+(5, 'Techno', 'Techno mobile', 'Techno smart phones', 'techno', 'techno.png', 1, '2020-03-09 23:00:00', NULL),
+(6, 'Mac Book Air', 'Mac book air', 'djhjsndfjnsdff', 'macbook-air', 'macbookair.png', 2, '2020-03-09 23:00:00', NULL),
+(7, 'HP', 'HP Laptops', 'hjdjsjdss', 'hp', 'hp.png', 2, '2020-03-09 23:00:00', NULL),
+(8, 'Lenovo', 'Lenovo laptops', 'sfddgsbsdd', 'lenovo', 'lenovo.png', 2, '2020-03-09 23:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -243,11 +253,8 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-<<<<<<< HEAD
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
->>>>>>> 639675a1b2671c4588802928a13385afdeb0d12b
+
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -259,7 +266,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `models`
 --
 ALTER TABLE `models`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `products`
