@@ -128,7 +128,7 @@ label:before {
 }
 
 .card-items {
-    height: 253px;
+    min-height: 253px;
 }
 
 .card-item-img {
