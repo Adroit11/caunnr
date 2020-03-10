@@ -10,4 +10,9 @@ class Model extends Models
     {
         return $this->belongsTo('App\Product');
     }
+
+    public function item()
+    {
+        return $this->hasMany('App\Item');
+    }
 }
