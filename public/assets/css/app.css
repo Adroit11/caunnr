@@ -57,6 +57,20 @@ label:before {
     background: url("/assets/icons/search.svg") center / contain no-repeat;
 }
 
+label.subscribe {
+    position: relative;
+}
+
+label.subscribe:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url("/assets/icons/email.svg") center / contain no-repeat;
+}
+
 .jADcty {
     display: flex;
     width: auto;
@@ -127,10 +141,38 @@ label:before {
     color: #000000;
 }
 
+.buynow_btn {
+    max-width: 120px;
+}
+
+.buynow {
+    width: 120px;
+    height: 50px;
+    background: #ffffff;
+    margin: -20px 0 0 -5px;
+    color: #000000;
+}
+
 .card-items {
     min-height: 253px;
 }
 
 .card-item-img {
     height: 115px;
+}
+
+.text-orange {
+    color: var(--mainOrange);
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.text-xxs {
+    font-size: 0.55rem;
+}
+
+.ft-w-full {
+    height: 20px;
 }
