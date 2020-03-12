@@ -133,11 +133,23 @@ label.subscribe:before {
     margin: 20px auto;
 }
 
+.add_bag_btn {
+    max-width: 120px;
+}
+
 .shopnow {
     width: 120px;
     height: 50px;
     margin: -20px 0 0 -5px;
     background: #ffffff;
+    color: #000000;
+}
+
+.addtobag {
+    width: 120px;
+    height: 50px;
+    margin: -20px 0 0 -5px;
+    background: var(--mainOrange);
     color: #000000;
 }
 
@@ -175,4 +187,8 @@ label.subscribe:before {
 
 .ft-w-full {
     height: 20px;
+}
+
+img.suggested_img {
+    max-height: 123px;
 }
