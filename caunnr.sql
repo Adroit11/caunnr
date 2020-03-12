@@ -58,7 +58,6 @@ CREATE TABLE `items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 --
 -- Dumping data for table `items`
 --
@@ -254,6 +253,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
+
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
