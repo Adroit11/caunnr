@@ -13,3 +13,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::livewire('/product/{slug}', 'product-details');

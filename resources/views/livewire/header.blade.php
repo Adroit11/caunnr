@@ -16,7 +16,9 @@
         <div class="container flex mx-auto px-12 py-6">
             <div class="flex items-center py-2 px-10 w-full">
                 <div class="w-4/5 flex items-center">
-                    <img src="{{asset('assets/icons/logo.svg')}}" alt="caunnr logo" class="logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{asset('assets/icons/logo.svg')}}" alt="caunnr logo" class="logo">
+                    </a>
                     <div class="ml-4 w-full">
                         <label>
                             <input class="pl-10 p-3 w-full border border-gray-300" type="text" placeholder="Search">
