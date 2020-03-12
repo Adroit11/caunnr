@@ -1,4 +1,17 @@
-
+    <div class="bg-black py-8 px-16 text-orange">
+        <div class="flex">
+            <div class="w-5/6">
+                <span class="font-semibold text-lg">
+                    Welcome to CAUUNR, all you need here is your card.
+                </span>
+            </div>
+            <div class="w-1/6 text-right">
+                <span class="bg-main-orange text-black rounded-full h-8 w-8 text-lg float-right text-center">
+                    x
+                </span>
+            </div>
+        </div>
+    </div>
     <div class="bg-white">
         <div class="container flex mx-auto px-12 py-6">
             <div class="flex items-center py-2 px-10 w-full">
