@@ -47,6 +47,6 @@ class CartController extends Controller
     {
         $item = Item::find($product);
         $item->addFavorite(2);
-        return back();
+        return redirect('/');
     }
 }
