@@ -38,7 +38,8 @@
                 </span>
             </div>
             <div class="w-full text-3xl my-6">
-                &#x20a6; {{$price}}
+                <span class="semi-bold">NGN {{number_format($price - $discount, 2)}}</span>
+                <span class="line-through">NGN {{number_format($price, 2)}}</span>
             </div>
             <!-- Quantity section -->
             <div class="w-full flex">
@@ -56,7 +57,7 @@
             <!-- end quantity section -->
             <!-- Add to bag section -->
             <div class="add_bag_btn bg-transparent py-2 mt-16 px-4 border border-gray-500">
-                <button class="modal-open addtobag text-white font-semibold">
+                <button class="modal-open addtobag text-white font-semibold" data-image="{{$image}}" data-name="{{$name}}" data-description="{{$description}}" data-price="{{number_format($price - $discount, 2)}}" data-note="{{$notes}}">
                     ADD TO BAG
                 </button>
             </div>
@@ -86,8 +87,8 @@
                     </div>
                     <div class="w-full my-4">
                         <p class="font-normal">{{$product->name}}</p>
-                        <span class="font-medium line-through">NGN {{number_format($product->price)}}</span><br />
-                        <span class="font-bold">NGN {{number_format($product->price - $product->discount)}}</span>
+                        <span class="font-medium line-through">NGN {{number_format($product->price, 2)}}</span><br />
+                        <span class="font-bold">NGN {{number_format($product->price - $product->discount, 2)}}</span>
                     </div>
                 </a>
             </div>
@@ -102,7 +103,7 @@
   <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
     
-    <div class="modal-container border border-mainorange bg-white w-10/12 mx-auto shadow-lg z-50 overflow-y-auto">
+    <div class="modal-container border border-mainorange bg-white w-9/12 mx-auto shadow-lg z-50 overflow-y-auto">
       
       <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
         <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
@@ -125,18 +126,40 @@
 
         <!--Body-->
         <div class="flex w-full">
-            <div class="1/3 mr-12">
-                <img src="{{asset('assets/gadget/A20s.jpg')}}" alt="mobile" />
+            <div class="1/3 mr-12 image_avatar">
+
             </div>
-            <div class="2/3 mr-12">
-                dff
+            <div class="2/3 mr-12 py-12">
+                <div class="my-6 product_text"></div>
+                <div class="product_price"></div>
+                <div class="my-6 flex product_quantity">
+                    <!-- Quantity section -->
+                    <div class="w-full flex">
+                        <div class="w-2/3 border border-gray-300 bg-white flex">
+                            <div class="w-1/4 flex justify-center text-gray-500 items-center text-2xl font-semibold">-</div>
+                            <div class="w-1/2 text-gray-500">
+                                <input class="pl-10 p-3 w-full" type="text" value="1">
+                            </div>
+                            <div class="w-1/4 flex justify-center text-gray-500 items-center text-2xl font-semibold">+</div>
+                        </div>
+                        <div class="w-1/3 p-4">
+                            <img class="h-6" src="{{asset('assets/icons/favorite.svg')}}" alt="favourite icon"/>
+                        </div>
+                    </div>
+                    <!-- end quantity section -->
+                </div>
             </div>
         </div>
 
         <!--Footer-->
-        <div class="flex justify-end pt-2">
-          <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
-          <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+        <div class="flex justify-end">
+            <!-- Add to bag section -->
+            <div class="add_bag_btn bg-transparent py-2 px-4 border border-gray-500">
+                <button class="addtobag text-white font-semibold">
+                    ADD TO BAG
+                </button>
+            </div>
+            <!-- End add to bag -->
         </div>
         
       </div>
