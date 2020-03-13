@@ -51,13 +51,15 @@
                     <div class="w-1/4 flex justify-center text-gray-500 items-center text-2xl font-semibold">+</div>
                 </div>
                 <div class="w-1/3 p-4">
-                    <img class="h-6" src="{{asset('assets/icons/favorite.svg')}}" alt="favourite icon"/>
+                    <a href="{{url('/favourite/'.$product_id)}}">
+                        <img class="h-6" src="{{asset('assets/icons/favorite.svg')}}" alt="favourite icon"/>
+                    </a>
                 </div>
             </div>
             <!-- end quantity section -->
             <!-- Add to bag section -->
             <div class="add_bag_btn bg-transparent py-2 mt-16 px-4 border border-gray-500">
-                <button class="modal-open addtobag text-white font-semibold" data-image="{{$image}}" data-name="{{$name}}" data-description="{{$description}}" data-price="{{number_format($price - $discount, 2)}}" data-note="{{$notes}}">
+                <button class="modal-open addtobag text-white font-semibold" data-product="{{$product_id}}" data-image="{{$image}}" data-name="{{$name}}" data-description="{{$description}}" data-price="{{number_format($price - $discount, 2)}}" data-note="{{$notes}}">
                     ADD TO BAG
                 </button>
             </div>
@@ -152,14 +154,8 @@
         </div>
 
         <!--Footer-->
-        <div class="flex justify-end">
-            <!-- Add to bag section -->
-            <div class="add_bag_btn bg-transparent py-2 px-4 border border-gray-500">
-                <button class="addtobag text-white font-semibold">
-                    ADD TO BAG
-                </button>
-            </div>
-            <!-- End add to bag -->
+        <div class="flex submit_cart justify-end">
+            
         </div>
         
       </div>

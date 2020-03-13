@@ -192,3 +192,7 @@ label.subscribe:before {
 img.suggested_img {
     max-height: 123px;
 }
+
+.cart_count {
+    margin: -50px 0 0 10px;
+}

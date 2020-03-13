@@ -17,6 +17,7 @@ class ProductDetails extends Component
     public $discount;
     public $next;
     public $previous;
+    public $product_id;
 
     public function mount($slug)
     {
@@ -25,6 +26,7 @@ class ProductDetails extends Component
         $previous = Item::where('id', '<', $product->id)->max('id');
         $next_slug = Item::find($next);
         $previous_slug = Item::find($previous);
+        $this->product_id = $product->id;
         $this->image = $product->image;
         $this->name = $product->name;
         $this->description = $product->description;

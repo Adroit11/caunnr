@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2020 at 03:29 PM
+-- Generation Time: Mar 13, 2020 at 04:31 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -40,6 +40,27 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `favoriteable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `favoriteable_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `favorites`
+--
+
+INSERT INTO `favorites` (`user_id`, `favoriteable_type`, `favoriteable_id`, `created_at`, `updated_at`) VALUES
+(2, 'App\\Item', 5, '2020-03-13 14:11:37', '2020-03-13 14:11:37');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `items`
 --
 
@@ -58,6 +79,7 @@ CREATE TABLE `items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 --
 -- Dumping data for table `items`
 --
@@ -102,7 +124,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2020_03_05_112544_create_products_table', 1),
 (5, '2020_03_06_140956_create_models_table', 1),
-(6, '2020_03_06_141935_create_items_table', 1);
+(6, '2020_03_06_141935_create_items_table', 1),
+(7, '2020_03_13_151123_create_favorites_table', 2);
 
 -- --------------------------------------------------------
 
@@ -201,6 +224,14 @@ ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`user_id`,`favoriteable_id`,`favoriteable_type`),
+  ADD KEY `favorites_favoriteable_type_favoriteable_id_index` (`favoriteable_type`,`favoriteable_id`),
+  ADD KEY `favorites_user_id_index` (`user_id`);
+
+--
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
@@ -253,14 +284,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `models`

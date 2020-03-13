@@ -34,11 +34,21 @@
                     </div>
                 </div>
                 <div class="w-1/5 flex justify-end">
-                    <div class="ml-6">
-                        <img src="{{asset('assets/icons/bag.svg')}}" alt="cart" class="header_icon">
+                    <div class="ml-6 flex">
+                    <a href="{{url('/cart')}}">
+                        <div class="flex flex-col">
+                            <img src="{{asset('assets/icons/bag.svg')}}" alt="cart" class="header_icon">
+                            <span class="cart_count bg-main-orange text-xs text-white z-10 rounded-full h-6 w-6 flex items-center justify-center">{{$total_cart}}</span>
+                        </div>
+                    </a>
                     </div>
                     <div class="ml-6">
-                        <img src="{{asset('assets/icons/favorite.svg')}}" alt="favourite" class="header_icon">
+                        <a href="{{url('/favorite')}}">
+                            <div class="flex flex-col mt-1">
+                                <img src="{{asset('assets/icons/favorite.svg')}}" alt="favourite" class="header_icon">
+                                <span class="cart_count bg-main-orange text-xs text-white z-10 rounded-full h-6 w-6 flex items-center justify-center">{{$total_favorite}}</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="ml-6">
                         <img src="{{asset('assets/icons/user.svg')}}" alt="profile" class="header_icon">
