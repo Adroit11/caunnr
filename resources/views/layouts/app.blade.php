@@ -75,7 +75,7 @@
         for (var i = 0; i < closemodal.length; i++) {
           closemodal[i].addEventListener('click', toggleModal)
         }
-        
+
         document.onkeydown = function(evt) {
           evt = evt || window.event
           var isEscape = false
@@ -88,8 +88,7 @@
           toggleModal()
           }
         };
-        
-        
+
         function toggleModal () {
           const body = document.querySelector('body')
           const modal = document.querySelector('.modal')
