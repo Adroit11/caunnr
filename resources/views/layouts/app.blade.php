@@ -57,15 +57,26 @@
           toggleModal()
           })
         }
+<<<<<<< HEAD
         
         const overlay = document.querySelector('.modal-overlay')
         overlay.addEventListener('click', toggleModal)
         
+=======
+
+        const overlay = document.querySelector('.modal-overlay')
+        overlay.addEventListener('click', toggleModal)
+
+>>>>>>> ed4984a6550a40f6c43c9978d702b65e626c9226
         var closemodal = document.querySelectorAll('.modal-close')
         for (var i = 0; i < closemodal.length; i++) {
           closemodal[i].addEventListener('click', toggleModal)
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> ed4984a6550a40f6c43c9978d702b65e626c9226
         document.onkeydown = function(evt) {
           evt = evt || window.event
           var isEscape = false
@@ -78,8 +89,13 @@
           toggleModal()
           }
         };
+<<<<<<< HEAD
         
         
+=======
+
+
+>>>>>>> ed4984a6550a40f6c43c9978d702b65e626c9226
         function toggleModal () {
           const body = document.querySelector('body')
           const modal = document.querySelector('.modal')
