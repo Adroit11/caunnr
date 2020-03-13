@@ -14,3 +14,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::livewire('/product/{slug}', 'product-details');
+Route::livewire('/cart', 'cart');
+//Route::get('cart', "cartController@index");
+Route::get('/add/{product}', 'CartController@store');
+Route::get('/delete/{product}', 'CartController@delete');
+Route::get('/favourite/{product}', 'CartController@favourite');
+Route::livewire('/favorite', 'favorite');
+
+Auth::routes();
