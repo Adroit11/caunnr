@@ -18,11 +18,9 @@ class CreateTransactionsTable extends Migration
             $table->string('reference');
             $table->double('amount', 8, 2)->nullable();
             $table->string('status')->nullable();
-            $table->unsignedBigInteger('item_id');
-            $table->index('item_id');
+            $table->string('item_id')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->index('user_id');
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
