@@ -155,7 +155,6 @@
 
         <!--Footer-->
         <div class="flex submit_cart justify-end">
-
         </div>
 
       </div>
