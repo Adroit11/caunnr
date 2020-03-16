@@ -20,5 +20,7 @@ Route::get('/add/{product}', 'CartController@store');
 Route::get('/delete/{product}', 'CartController@delete');
 Route::get('/favourite/{product}', 'CartController@favourite');
 Route::livewire('/favorite', 'favorite');
-
+Route::post('/checkout', 'PaymentController@redirectToGateway')->name('checkout');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+Route::livewire('/payment', 'payment');
 Auth::routes();

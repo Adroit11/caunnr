@@ -104,9 +104,9 @@
 <!--Modal-->
   <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
-    
+
     <div class="modal-container border border-mainorange bg-white w-9/12 mx-auto shadow-lg z-50 overflow-y-auto">
-      
+
       <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
         <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
           <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
@@ -155,9 +155,78 @@
 
         <!--Footer-->
         <div class="flex submit_cart justify-end">
-            
+
         </div>
-        
+
       </div>
     </div>
   </div>
+  <script>
+        var openmodal = document.querySelectorAll('.modal-open')
+        var display_image = document.querySelector('.image_avatar')
+        var product_title = document.querySelector('.product_text')
+        var product_cost = document.querySelector('.product_price')
+        var submit_cart = document.querySelector('.submit_cart')
+        for (var i = 0; i < openmodal.length; i++) {
+          openmodal[i].addEventListener('click', function(event){
+          var name = this.getAttribute('data-name')
+          var description = this.getAttribute('data-description')
+          var image = this.getAttribute('data-image')
+          var price = this.getAttribute('data-price')
+          var note = this.getAttribute('data-note')
+          var product_id = this.getAttribute('data-product')
+          display_image.innerHTML = `<img style="width: 460px;" src="{{asset('assets/gadget/${image}')}}" alt="mobile" />`
+          product_title.innerHTML = `
+                                      <span class="font-bold text-3xl my-6">${name}</span>
+                                      <p class="font-thin text-medium">
+                                        ${description}<br/>
+                                        <span class="mt-4">${note}</span>
+                                      </p>
+                                      `
+          product_cost.innerHTML = `<span class="font-bold text-2xl">NGN ${price}</span>`
+          submit_cart.innerHTML = `<!-- Add to bag section -->
+                                    <div class="add_bag_btn bg-transparent py-2 px-4 border border-gray-500">
+                                        <button onclick="addToCart(${product_id})" class="addtobag submit_cart_order text-white font-semibold">
+                                            ADD TO BAG
+                                        </button>
+                                    </div>
+                                    <!-- End add to bag -->`
+          event.preventDefault()
+          toggleModal()
+          })
+        }
+        const overlay = document.querySelector('.modal-overlay')
+        if(overlay != null){
+          overlay.addEventListener('click', toggleModal)
+        }
+
+        var closemodal = document.querySelectorAll('.modal-close')
+        for (var i = 0; i < closemodal.length; i++) {
+          closemodal[i].addEventListener('click', toggleModal)
+        }
+
+        document.onkeydown = function(evt) {
+          evt = evt || window.event
+          var isEscape = false
+          if ("key" in evt) {
+          isEscape = (evt.key === "Escape" || evt.key === "Esc")
+          } else {
+          isEscape = (evt.keyCode === 27)
+          }
+          if (isEscape && document.body.classList.contains('modal-active')) {
+          toggleModal()
+          }
+        };
+
+        function toggleModal () {
+          const body = document.querySelector('body')
+          const modal = document.querySelector('.modal')
+          modal.classList.toggle('opacity-0')
+          modal.classList.toggle('pointer-events-none')
+          body.classList.toggle('modal-active')
+        }
+
+        function addToCart(product) {
+          window.location=`/add/${product}`;
+        }
+    </script>
