@@ -159,10 +159,22 @@ label.subscribe:before {
 
 .buynow {
     width: 120px;
-    height: 50px;
+    height: auto;
     background: #ffffff;
     margin: -20px 0 0 -5px;
     color: #000000;
+}
+
+.login_btn {
+    max-width: 95%;
+}
+
+.login {
+    width: 100%;
+    height: 70px;
+    background: var(--mainOrange);
+    margin: -20px 0 0 20px;
+    color: #ffffff;
 }
 
 .card-items {
@@ -195,4 +207,8 @@ img.suggested_img {
 
 .cart_count {
     margin: -50px 0 0 10px;
+}
+
+.w-650 {
+    width: 650px;
 }

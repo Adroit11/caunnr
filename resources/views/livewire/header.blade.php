@@ -21,17 +21,17 @@
                     </a>
                     <div class="ml-4 w-full">
                         <label>
-                            <input class="pl-10 p-3 w-full border border-gray-300" type="text" placeholder="Search">
+                            @livewire('search-bar')
                         </label>
                     </div>
-                    <div class="ml-4">
+                    <!-- <div class="ml-4">
                         <select class="p-3 border border-gray-300 text-gray-500"><option>All</option></select>
                     </div>
                     <div class="ml-4">
                         <button class="p-3 w-32 bg-main-orange text-white">
                             Search
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="w-1/5 flex justify-end">
                     <div class="ml-6 flex">
@@ -50,9 +50,15 @@
                             </div>
                         </a>
                     </div>
-                    <div class="ml-6">
-                        <img src="{{asset('assets/icons/user.svg')}}" alt="profile" class="header_icon">
-                    </div>
+                    @if(Auth::check())
+                        <div class="ml-6">
+                            <img src="{{asset('assets/icons/user.svg')}}" alt="profile" class="header_icon">
+                        </div>
+                    @else
+                        <div class="ml-2 text-orange text-lg font-medium">
+                            <a href="{{route('login')}}">Login</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

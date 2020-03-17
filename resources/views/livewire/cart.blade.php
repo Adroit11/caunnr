@@ -72,17 +72,21 @@
                 <a href="{{url('/')}}">
                     <button class="border text-orange p-4 mx-4">Continue Shopping</button>
                 </a>
+                @if(Auth::check())
                 <form method="POST" action="{{ route('checkout') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
                     @csrf
-                    <input type="hidden" name="email" value="boladeadio@gmail.com">
-                    <input type="hidden" name="orderID" value="345">
+                    <input type="hidden" name="email" value="{{Auth::user()->email}}">
+                    <input type="hidden" name="orderID" value="{{uniqid()}}">
                     <input type="hidden" name="amount" value="{{$total*100}}">
-                    <input type="hidden" name="quantity" value="3">
+                    <input type="hidden" name="quantity" value="1">
                     <input type="hidden" name="metadata" value="{{ json_encode(array('products' => $carts)) }}" >
                     <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
                     <input type="hidden" name="key" value="{{ config('paystack.secretKey') }}">
                     <button type="submit" class="bg-main-orange text-white p-4">Proceed to checkout</button>
                 </form>
+                @else
+                    <a href="{{ route('login')}}"><button class="bg-main-orange text-white p-4">Login/Register to checkout</button</a>
+                @endif
             </div>
         </div>
     </div>
