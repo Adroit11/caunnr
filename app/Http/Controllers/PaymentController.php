@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Paystack;
 use App\Transaction;
+use Auth;
+use Cart;
 
 class PaymentController extends Controller
 {
@@ -34,11 +36,13 @@ class PaymentController extends Controller
      */
     public function handleGatewayCallback()
     {
+        $user_id = Auth::user()->id;
         $paymentDetails = Paystack::getPaymentData();
         if($paymentDetails['status'] === true){
             $item = Array();
             foreach ($paymentDetails['data']['metadata']['products'] as $key => $value) {
                 $item[] =  $key;
+                Cart::session($user_id)->remove($key);
             }
             $item_id = implode(',',$item);
             $payment = new Transaction;
@@ -46,7 +50,7 @@ class PaymentController extends Controller
             $payment->amount = ($paymentDetails['data']['amount']/100);
             $payment->status = $paymentDetails['data']['status'];
             $payment->item_id = $item_id;
-            $payment->user_id = 2;
+            $payment->user_id = $user_id;
             if($payment->save()){
                 return redirect('/')->with('success', 'Transaction completed successfully.');
             }else{

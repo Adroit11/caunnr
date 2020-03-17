@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Item;
 use Cart;
+use Auth;
 
 class CartController extends Controller
 {
@@ -17,7 +18,7 @@ class CartController extends Controller
 
     public function store($product_id)
     {
-        $user = 2;
+        $user = Auth::user()->id;
         $product = Item::find($product_id);
         $price = $product->price - ($product->price * ($product->discount / 100));
         Cart::session($user)->add(array(
@@ -33,20 +34,21 @@ class CartController extends Controller
                                 ),
             'associatedModel' => $product
         ));
-        $items = Cart::getContent();
         return redirect('cart');
     }
 
     public function delete($product)
     {
-        Cart::session(2)->remove($product);
+        $user = Auth::user()->id;
+        Cart::session($user)->remove($product);
         return redirect('/');
     }
 
     public function favourite($product)
     {
+        $user = Auth::user()->id;
         $item = Item::find($product);
-        $item->addFavorite(2);
+        $item->addFavorite($user);
         return redirect('/');
     }
 }

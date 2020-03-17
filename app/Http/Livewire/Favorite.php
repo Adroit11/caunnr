@@ -10,8 +10,9 @@ class Favorite extends Component
 {
     public function render()
     {
-        $favorites = Fav::all();
-        dd($favorites);
+        $favorites = Fav::join('items', 'favorites.favoriteable_id', '=', 'items.id')
+                        ->select('items.*')
+                        ->get();
         return view('livewire.favorite', compact('favorites'));
     }
 }

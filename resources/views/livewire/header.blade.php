@@ -50,9 +50,15 @@
                             </div>
                         </a>
                     </div>
-                    <div class="ml-6">
-                        <img src="{{asset('assets/icons/user.svg')}}" alt="profile" class="header_icon">
-                    </div>
+                    @if(Auth::check())
+                        <div class="ml-6">
+                            <img src="{{asset('assets/icons/user.svg')}}" alt="profile" class="header_icon">
+                        </div>
+                    @else
+                        <div class="ml-2 text-orange text-lg font-medium">
+                            <a href="{{route('login')}}">Login</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
