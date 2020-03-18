@@ -1,8 +1,8 @@
 
     <div class="bg-white">
-        <div class="container flex mx-auto px-12 py-6">
-            <div class="flex items-center py-2 px-10 w-full">
-                <div class="w-2/5">
+        <div class="container flex mx-auto md:px-12 px-6 py-6">
+            <div class="flex flex-col md:flex-row md:items-center md:py-2 md:px-10 w-full">
+                <div class="w-full md:w-2/5">
                     <h5 class="text-xs text-gray-700 font-bold">
                         New to Caunnr?
                     </h5>
@@ -10,7 +10,7 @@
                         Subscribe to our newsletter to get updates on our latest offers!
                     </span>
                 </div>
-                <div class="w-3/5 flex">
+                <div class="w-full mt-2 md:w-3/5 flex">
                     <img src="{{asset('assets/icons/logo.svg')}}" alt="caunnr logo" class="logo">
                     <div class="ml-4 w-full">
                         <label class="subscribe">
@@ -18,7 +18,7 @@
                         </label>
                     </div>
                     <div class="ml-4">
-                        <button class="p-3 w-32 bg-main-orange text-white">
+                        <button class="p-3 w-20 bg-main-orange text-white text-sm">
                             Subscribe
                         </button>
                     </div>
@@ -28,9 +28,9 @@
     </div>
 <!-- Dark footer section -->
 <div class="bg-black w-full text-gray-700">
-    <div class="container flex flex-col mx-auto px-12 py-6">
-        <div class="flex py-6 px-10 w-full">
-            <div class="w-2/5">
+    <div class="md:container flex flex-col md:mx-auto md:px-12 px-6 py-6">
+        <div class="flex flex-col md:flex-row py-6 md:px-10 w-full">
+            <div class="w-full md:w-2/5">
                 <h4 class="font-bold">Welcome to Caunnr</h4>
                 <span class="font-thin text-sm">
                     <p class="my-3">
@@ -44,8 +44,8 @@
                     </p>
                 </span>
             </div>
-            <div class="w-3/5 flex ml-20">
-                <div class="flex-1 px-4">
+            <div class="w-full md:w-3/5 flex md:flex-row flex-col md:ml-20">
+                <div class="flex-1 md:px-4">
                     <h4 class="font-bold">Contact Us</h4>
                     <span class="font-thin text-sm">
                         <p class="my-3">
@@ -58,7 +58,7 @@
                         </p>                    
                     </span>
                 </div>
-                <div class="flex-1 px-4 flex flex-col">
+                <div class="flex-1 md:px-4 flex flex-col">
                     <div class="w-full">
                         <h4 class="font-bold">Quick touch</h4>
                         <ul class="font-thin text-sm">

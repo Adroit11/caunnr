@@ -1,5 +1,5 @@
 <a href="{{url('/product/'.$alt)}}">
-    <div class="border border-gray-200 card-items">
+    <div class="border border-gray-200 mx-2 my-2 card-items">
         <div class="p-3">
             <img class="card-item-img" src="{{asset('assets/gadget/'.$image)}}" alt="{{$alt}}"/>
             <span class="text-sm font-semibold">{{$name}}</span><br>

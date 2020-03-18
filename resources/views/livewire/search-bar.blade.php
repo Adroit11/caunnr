@@ -1,4 +1,4 @@
-<div class="relative">
+<div class="md:relative">
     <input class="pl-10 p-3 w-full border border-gray-300" type="text" wire:model="query" placeholder="Search">
     @if(!empty($products))
         <div class="absolute z-10 list-group bg-white w-full rounded-t-none shadow-lg">

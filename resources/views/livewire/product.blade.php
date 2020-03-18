@@ -1,7 +1,7 @@
 @if($products->isNotEmpty())
     @foreach($products as $product)
-        <div class="w-full flex pl-12 bg-white mb-12">
-            <div class="w-2/5 flex">
+        <div class="w-full flex flex-col md:flex-row md:pl-12 bg-white md:mb-12">
+            <div class="hidden md:block md:w-2/5 md:flex">
                 <div class="flex-1 py-12">
                     <h3 class="text-lg font-semibold">{{$product->name}}</h3>
                     <div class="mt-6">
@@ -24,8 +24,22 @@
                     </div>
                 </div>
             </div>
-            <div class="w-3/5">
-                <div class="w-full grid grid-cols-4">
+            <div class="block w-full p-6 flex flex-col md:hidden">
+                <div class="w-full">
+                    <h3 class="text-2xl font-semibold">{{$product->name}}</h3>
+                </div>
+                <div class="w-full">
+                    <div class="text-xs font-medium flex">
+                        @foreach($product->model as $model)
+                            <div class="text-left mr-2">
+                                <a href="#">{{$model->name}}</a> |
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <div class="w-full p-6 md:w-3/5">
+                <div class="w-full grid grid-cols-2 md:grid-cols-4">
                     @foreach($product->model as $model)
                         @foreach($model->item->take(8) as $item)
                             @livewire('product-items', ['model' => $item])
