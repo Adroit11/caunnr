@@ -22,9 +22,9 @@
 
     </head>
     <body class="bg-main-body-ash">
-        <div class="font-sans bg-grey-lighter flex flex-col min-h-screen w-full">
+        <div class="font-sans bg-grey-lighter flex flex-col min-h-screen w-full md:w-full">
             @livewire('header')
-            <div class="container mx-auto flex px-12 py-6">
+            <div class="md:container md:mx-auto flex md:px-12 md:py-6">
                 @yield('content')
             </div>
             @livewire('footer')

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex flex-col items-center py-2 px-10 w-full">
-        <div class="bg-main-orange mt-5 h-80 px-12 w-full">
+    <div class="flex flex-col items-center md:py-2 md:px-10 w-full">
+        <div class="bg-main-orange md:mt-5 h-80 md:px-12 p-6 w-full">
             <div class="flex">
-                <div class="flex-1 mt-32 py-12">
-                    <h2 class="text-5xl font-bold">Log In to Caunnr and<br>Get a Secret Offer</h2>
-                    <p><span class="font-bold">Exclusive promo for registered users only</span></p>
+                <div class="md:flex-1 md:mt-32 md:py-12">
+                    <h2 class="md:text-5xl text-lg font-bold">Log In to Caunnr and<br>Get a Secret Offer</h2>
+                    <p><span class="font-bold md:text-normal text-xs">Exclusive promo for registered users only</span></p>
                 </div>
-                <div class="flex-1 jADcty">
+                <div class="md:flex-1 hidden md:block jADcty">
                     <img src="{{asset('assets/img/banner.png')}}" alt="banner">
                 </div>
             </div>
@@ -21,7 +21,19 @@
 
             </div>
         </div>
-        <div class="w-full flex flex-row py-8 text-xl text-gray-600">
+        <div class="block md:hidden p-6 w-full flex flex-col bg-white">
+            <div class="w-full flex mb-6">
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full circle-deep-blue"></div>
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full circle-green"></div>
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full bg-main-orange"></div>
+            </div>
+            <div class="w-full flex">
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full circle-deep-blue"></div>
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full circle-green"></div>
+                <div class="sm-circle flex-1 mx-2 sm-h-cus border rounded-full bg-main-orange"></div>
+            </div>
+        </div>
+        <div class="hidden md:block md:w-full md:flex md:flex-row md:py-8 text-xl text-gray-600">
             <div class="w-1/2 text-2xl">
                 We’ve got great gadget for you.
             </div>
@@ -29,20 +41,20 @@
                 Sales and Promotions
             </div>
         </div>
-        <div class="w-full flex px-12 pt-6 border-t-2 border-gray-600">
+        <div class="hidden md:block md:w-full md:flex md:px-12 md:pt-6 md:border-t-2 border-gray-600">
             <div class="circle flex-1 h-cus border rounded-full m-6 cirlce-purple">
+            </div>
+            <div class="circle flex-1 h-cus border rounded-full m-6 cirlce-blue">
+            </div>
+            <div class="circle flex-1 h-cus border rounded-full m-6 cirlce-deep-purple">
+            </div>
+            <div class="circle flex-1 h-cus border rounded-full m-6 circle-deep-blue">
+            </div>
+            <div class="circle flex-1 h-cus border rounded-full m-6 circle-green">
+            </div>
+            <div class="circle flex-1 h-cus border rounded-full m-6 bg-main-orange">
+            </div>
         </div>
-        <div class="circle flex-1 h-cus border rounded-full m-6 cirlce-blue">
-        </div>
-        <div class="circle flex-1 h-cus border rounded-full m-6 cirlce-deep-purple">
-        </div>
-        <div class="circle flex-1 h-cus border rounded-full m-6 circle-deep-blue">
-        </div>
-        <div class="circle flex-1 h-cus border rounded-full m-6 circle-green">
-        </div>
-        <div class="circle flex-1 h-cus border rounded-full m-6 bg-main-orange">
-        </div>
-    </div>
     <!-- Alert -->
         @if(Session::has('success'))
             <div class="fixed flex bottom-0 right-0 items-center bg-white text-orange rounded text-sm font-bold px-4 py-3" role="alert">
@@ -56,7 +68,7 @@
             </div>
         @endif
     <!-- end alert -->
-    <div class="w-full flex px-12 mb-16 text-gray-600 text-center font-semibold">
+    <div class="hidden md:block md:w-full md:flex md:px-12 md:mb-16 md:text-gray-600 text-center font-semibold">
         <div class="flex-1 mx-6">
             Deals
         </div>
@@ -80,7 +92,7 @@
         @livewire('product')
         <!-- End Products card -->
         <!-- favorite card section -->
-        <div class="w-full flex my-12">
+        <div class="hidden md:w-full md:flex md:my-12">
             <div class="w-1/3 py-6">
                 <h1 class="text-4xl font-semibold">
                     Your Favourites<br />
